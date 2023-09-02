@@ -29,7 +29,7 @@ export const Home = ({ user, setUser }: UserProps) => {
 
   useEffect(() => {
     setRandomGreeting(getRandomGreeting());
-    document.title = "Todo App";
+    document.title = "Undefeated";
     const interval = setInterval(() => {
       setRandomGreeting(getRandomGreeting());
       setGreetingKey((prevKey) => prevKey + 1); // Update the key on each interval
@@ -90,14 +90,14 @@ export const Home = ({ user, setUser }: UserProps) => {
             </Box>
             <TaskCountTextContainer>
               <TaskCountHeader>
-                You have {user.tasks.length - completedTasksCount} unfinished tasks{" "}
+                Kamu Punya {user.tasks.length - completedTasksCount} Tugas Belum Terselesaikan!{" "}
                 {completedTasksCount > 0 && `and ${completedTasksCount} done`}
               </TaskCountHeader>
               <TaskCompletionText>
                 {getTaskCompletionText(completedTaskPercentage)}
               </TaskCompletionText>
               {tasksWithDeadlineTodayCount > 0 && (
-                <span>Tasks due today: {tasksWithDeadlineTodayCount}</span>
+                <span>Tugas Hari ini : {tasksWithDeadlineTodayCount}</span>
               )}
             </TaskCountTextContainer>
           </TasksCount>
@@ -105,7 +105,7 @@ export const Home = ({ user, setUser }: UserProps) => {
       )}
       {!isOnline && (
         <Offline>
-          <WifiOff /> You're offline but you can use the app!
+          <WifiOff /> Masio Ragablek Kuota Tetep Kenek Kok
         </Offline>
       )}
       <Tasks user={user} setUser={setUser} />

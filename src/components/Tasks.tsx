@@ -429,9 +429,9 @@ export const Tasks = ({ user, setUser }: UserProps): JSX.Element => {
           ))
         ) : (
           <NoTasks>
-            <b>You don't have any tasks yet</b>
+            <b>Anda Belum Membuat Tugas!</b>
             <br />
-            Click on the <b>+</b> button to add one
+            Tekan Tombol <b>+</b> Untuk Menambahkan Tugas
           </NoTasks>
         )}
 
@@ -464,7 +464,7 @@ export const Tasks = ({ user, setUser }: UserProps): JSX.Element => {
           },
         }}
       >
-        <DialogTitle>Are you sure you want to delete the task?</DialogTitle>
+        <DialogTitle>Kamu Yakin mau menghapus tugas ini?</DialogTitle>
         <DialogContent>
           {user.tasks.find((task) => task.id === selectedTaskId)?.emoji !== undefined && (
             <p

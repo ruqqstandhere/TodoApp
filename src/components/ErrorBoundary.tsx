@@ -79,7 +79,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
               sx={{ m: "14px 6px", p: "12px 20px", borderRadius: "14px" }}
               onClick={() => exportTasksToJson(this.props.user.tasks)}
             >
-              <FileDownload /> &nbsp; Export Tasks To JSON
+              <FileDownload /> &nbsp; Upload
             </Button>
             <br />
             <code>{JSON.stringify(this.props.user, null, 4)}</code>

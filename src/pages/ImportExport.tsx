@@ -169,7 +169,7 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
           disabled={selectedTasks.length === 0}
           variant="outlined"
         >
-          <FileDownload /> &nbsp; Export Selected to JSON{" "}
+          <FileDownload /> &nbsp; Export Tugas Terpilih Ke JSON{" "}
           {selectedTasks.length > 0 && `[${selectedTasks.length}]`}
         </StyledButton>
 
@@ -178,10 +178,10 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
           disabled={user.tasks.length === 0}
           variant="outlined"
         >
-          <FileDownload /> &nbsp; Export All Tasks to JSON
+          <FileDownload /> &nbsp; Export Semua Tugas Ke Json
         </StyledButton>
 
-        <h2 style={{ textAlign: "center" }}>Import Tasks From JSON</h2>
+        <h2 style={{ textAlign: "center" }}>Import Tugas Dari JSON</h2>
         <input
           accept=".json"
           id="import-file"

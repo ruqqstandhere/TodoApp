@@ -72,13 +72,13 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
     >
       <DialogTitle sx={{ display: "flex", alignItems: "center" }}>
         <Settings />
-        &nbsp;Settings
+        &nbsp;Pengaturan
       </DialogTitle>
       <Container>
         {/* Select component to choose the emoji style */}
         <FormGroup>
           <FormControl>
-            <FormLabel>Emoji Settings</FormLabel>
+            <FormLabel>Setting Emoji </FormLabel>
             <Select
               value={user.emojisStyle}
               onChange={handleEmojiStyleChange}
@@ -100,7 +100,8 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
                     fontWeight: 500,
                   }}
                 >
-                  <WifiOff /> You can't change the emoji style <br /> when you are offline
+                  <WifiOff /> Kamu tidak dapat mengubah model emoji saat kamu offline! <br /> Makane
+                  Tuku paketan blok!
                 </MenuItem>
               )}
 
@@ -138,7 +139,7 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
 
         {/* Switch components to control different app settings */}
         <FormGroup>
-          <FormLabel>App Settings</FormLabel>
+          <FormLabel>Pengaturan Aplikasi</FormLabel>
           <FormControlLabel
             sx={{ opacity: settings.enableCategories ? 1 : 0.8 }}
             control={
@@ -147,7 +148,7 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
                 onChange={handleSettingChange("enableCategories")}
               />
             }
-            label="Enable Categories"
+            label="Izinkan Kategori"
           />
         </FormGroup>
         <FormGroup>
@@ -156,7 +157,7 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
             control={
               <Switch checked={settings.enableGlow} onChange={handleSettingChange("enableGlow")} />
             }
-            label="Enable Glow Effect"
+            label="Izinkan Efek Glow Up"
           />
         </FormGroup>
         <FormGroup>
@@ -168,7 +169,7 @@ export const SettingsDialog = ({ open, onClose, user, setUser }: SettingsProps) 
                 onChange={handleSettingChange("doneToBottom")}
               />
             }
-            label="Move Done Tasks To Bottom"
+            label="Pindahkan Tugas Selesai Ke Bawah"
           />
         </FormGroup>
       </Container>

@@ -6,16 +6,16 @@
 export const getTaskCompletionText = (completionPercentage: number): string => {
   switch (true) {
     case completionPercentage === 0:
-      return "No tasks completed yet. Keep going!";
+      return "Tidak ada jadwal terselesaikan!";
     case completionPercentage === 100:
-      return "Congratulations! All tasks completed!";
+      return "Selamat Tugas Anda Telah Selesai Semua, you did great well!";
     case completionPercentage >= 75:
-      return "Almost there!";
+      return "Semangat Kurang Dikit Lagi";
     case completionPercentage >= 50:
-      return "You're halfway there! Keep it up!";
+      return "Masih Setengah Perjalananmu, Ayo Semangat";
     case completionPercentage >= 25:
-      return "You're making good progress.";
+      return "Langkah Yang Bagus, Ayo Teruskan";
     default:
-      return "You're just getting started.";
+      return "Langkah Awal Mengubah Dunia, adalah mengubah dirimu Sendiri";
   }
 };

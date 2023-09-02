@@ -118,7 +118,7 @@ export const EditTask = ({ open, task, onClose, onSave, user }: EditTaskProps) =
           alignItems: "center",
         }}
       >
-        <span>Edit Task</span>
+        <span>Edit Tugas</span>
         {editedTask?.lastSave && (
           <LastEdit>
             Last Edited: {new Date(editedTask?.lastSave).toLocaleDateString()}
@@ -144,9 +144,9 @@ export const EditTask = ({ open, task, onClose, onSave, user }: EditTaskProps) =
           error={nameError || editedTask?.name === ""}
           helperText={
             editedTask?.name === ""
-              ? "Name is required"
+              ? "Nama Di Butuhkan"
               : nameError
-              ? `Name should be less than or equal to ${TASK_NAME_MAX_LENGTH} characters`
+              ? `Nama Gaoleh kurang teko ${TASK_NAME_MAX_LENGTH} karakter`
               : null
           }
         />
@@ -161,8 +161,7 @@ export const EditTask = ({ open, task, onClose, onSave, user }: EditTaskProps) =
           margin="normal"
           error={descriptionError}
           helperText={
-            descriptionError &&
-            `Description is too long (maximum ${DESCRIPTION_MAX_LENGTH} characters)`
+            descriptionError && `Deskripsi kedawan  (maximum ${DESCRIPTION_MAX_LENGTH} karakter)`
           }
         />
         {/* <br />
@@ -179,18 +178,17 @@ export const EditTask = ({ open, task, onClose, onSave, user }: EditTaskProps) =
         />
         {/* <br />
         <br /> */}
-        {user.settings[0].enableCategories !== undefined &&
-          user.settings[0].enableCategories && (
-            <>
-              <Typography>Category</Typography>
+        {user.settings[0].enableCategories !== undefined && user.settings[0].enableCategories && (
+          <>
+            <Typography>Category</Typography>
 
-              <CategorySelect
-                user={user}
-                selectedCategories={selectedCategories}
-                setSelectedCategories={setSelectedCategories}
-              />
+            <CategorySelect
+              user={user}
+              selectedCategories={selectedCategories}
+              setSelectedCategories={setSelectedCategories}
+            />
 
-              {/* {editedTask?.category &&
+            {/* {editedTask?.category &&
                 editedTask.category.length > 0 &&
                 !user.categories.some(
                   (category) =>
@@ -228,8 +226,8 @@ export const EditTask = ({ open, task, onClose, onSave, user }: EditTaskProps) =
                     </span>
                   </div>
                 )} */}
-            </>
-          )}
+          </>
+        )}
         <Typography>Color</Typography>
         <ColorPicker
           type="color"

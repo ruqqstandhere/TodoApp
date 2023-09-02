@@ -6,27 +6,21 @@ export const getRandomGreeting = (): string => {
   const hoursLeft = 24 - new Date().getHours();
 
   const greetingsText: string[] = [
-    "Let's make today count!",
+    "Smile Make's your days younger :)",
     "Get things done and conquer the day!",
-    "Embrace the power of productivity!",
-    "Set your goals, crush them, repeat.",
+    "Usaha Tidak akan menghianati hasil!",
+    "Jangan Hanya Di Mimpikan, Tapi Wujudkan",
     "Today is a new opportunity to be productive!",
-    "Make every moment count.",
-    "Stay organized, stay ahead.",
-    "Take charge of your day!",
-    "One task at a time, you've got this!",
+    "Sesuatu yang hilang darimu akan kembali dengan bentuk yang lain",
+    "Sebaik-baiknya manusia, adalah manusia yang bermanfaat bagi manusia lain",
+    "Tuhan TAU apa yang kamu impikan, jadi Tenang Lah",
+    "EAT,SLEEP,CODING REPEAT",
     "Productivity is the key to success.",
-    "Let's turn plans into accomplishments!",
+    "Jatuh cinta adalah hal yang mudah, yang susah adalah menemukan tempat yang tepat untuk jatuh cinta",
     "Start small, achieve big.",
     "Be efficient, be productive.",
-    "Harness the power of productivity!",
-    "Get ready to make things happen!",
-    "It's time to check off those tasks!",
-
-    " Start your day with a plan!",
-    "Stay focused, stay productive.",
-    "Unlock your productivity potential.",
-    "Turn your to-do list into a to-done list!",
+    "Allah Tahu Kamu Sudah Berusaha",
+    "AKU MENYERAH! AKUU?MENYERAH? Oh Tentu Tidak",
 
     `Have a wonderful  ${new Date().toLocaleDateString("en", {
       weekday: "long",
@@ -35,7 +29,7 @@ export const getRandomGreeting = (): string => {
       month: "long",
     })}! A great month for productivity!`,
     hoursLeft > 4
-      ? `${hoursLeft} hours left in the day. Use them wisely!`
+      ? `${hoursLeft} hours left in the day. Gunakan Dengan Tepat agar tak menyesal!`
       : `Only ${hoursLeft} hours left in the day`,
 
     // <TextWithEmoji emojiStyle={emojiStyle} unified="1f5d3-fe0f">

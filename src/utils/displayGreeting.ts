@@ -7,11 +7,11 @@ export const displayGreeting = (): string => {
   const currentHour = currentTime.getHours();
   let greeting: string;
   if (currentHour < 12 && currentHour >= 5) {
-    greeting = "Good morning";
+    greeting = "Sugeng Enjing";
   } else if (currentHour < 18 && currentHour > 12) {
-    greeting = "Good afternoon";
+    greeting = "Sugeng Daluu";
   } else {
-    greeting = "Good evening";
+    greeting = "Sugeng Dalu";
   }
 
   return greeting;

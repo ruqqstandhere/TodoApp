@@ -88,7 +88,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
               src={(user.profilePicture as string) || undefined}
               onError={() => {
                 setUser({ ...user, profilePicture: null });
-                throw new Error("Error in profile picture URL");
+                throw new Error("Sepurane Link Gak KETEMU");
               }}
               sx={{
                 width: "96px",
@@ -105,7 +105,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
           ).toLocaleTimeString()}`}
         >
           <CreatedAtDate>
-            Registered since {new Date(user.createdAt).toLocaleDateString()}
+            Terdaftar Mulai {new Date(user.createdAt).toLocaleDateString()}
           </CreatedAtDate>
         </Tooltip>
 
@@ -126,7 +126,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
           onClick={handleSaveName}
           disabled={name.length > USER_NAME_MAX_LENGTH || name === ""}
         >
-          Save name
+          Simpan Nama
         </SaveBtn>
 
         <Button
@@ -146,17 +146,17 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
           style: { borderRadius: "24px", padding: "12px" },
         }}
       >
-        <DialogTitle>Change Profile Picture</DialogTitle>
+        <DialogTitle>Ganti Foto Profil</DialogTitle>
         <DialogContent>
           <StyledInput
             autoFocus
-            label="Link to profile picture"
+            label="Tulis Link Foto Profil"
             sx={{ margin: "8px 0" }}
             value={profilePictureURL}
             error={profilePictureURL.length > PROFILE_PICTURE_MAX_LENGTH}
             helperText={
               profilePictureURL.length > PROFILE_PICTURE_MAX_LENGTH
-                ? `URL is too long maximum ${PROFILE_PICTURE_MAX_LENGTH} characters`
+                ? `URL Kedawan maximum ${PROFILE_PICTURE_MAX_LENGTH} Karakter`
                 : ""
             }
             onChange={(e) => {
@@ -173,7 +173,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
             variant="outlined"
             sx={{ margin: "16px 0", padding: "8px 18px", borderRadius: "12px" }}
           >
-            <Delete /> &nbsp; Delete Image
+            <Delete /> &nbsp; Hapus Gambar
           </Button>
         </DialogContent>
         <DialogActions>
@@ -193,7 +193,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
               }
             }}
           >
-            Save
+            Simpan
           </DialogBtn>
         </DialogActions>
       </Dialog>
@@ -209,12 +209,12 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
       >
         <DialogTitle>Logout Confirmation</DialogTitle>
         <DialogContent>
-          Are you sure you want to logout? <b>Your tasks will not be saved.</b>
+          Yakin koe te log out? <b>Tugas anda akan hilang.</b>
         </DialogContent>
         <DialogActions>
-          <DialogBtn onClick={handleLogoutConfirmationClose}>Cancel</DialogBtn>
+          <DialogBtn onClick={handleLogoutConfirmationClose}>Gasido</DialogBtn>
           <DialogBtn onClick={handleLogout} color="error">
-            Logout
+            Aku Ngeyel!
           </DialogBtn>
         </DialogActions>
       </Dialog>

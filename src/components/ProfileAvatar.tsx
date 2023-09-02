@@ -104,7 +104,7 @@ export const ProfileAvatar = ({ user, setUser }: UserProps) => {
               handleClose();
             }}
           >
-            <Category /> &nbsp; Categories
+            <Category /> &nbsp; Kategori
           </StyledMenuItem>
         )}
         <StyledMenuItem
@@ -124,7 +124,7 @@ export const ProfileAvatar = ({ user, setUser }: UserProps) => {
             handleClose();
           }}
         >
-          <Settings /> &nbsp; Settings
+          <Settings /> &nbsp; Pengaturan
         </StyledMenuItem>
 
         <StyledMenuItem onClick={handleLogoutConfirmationOpen} sx={{ color: "#ff4040" }}>
@@ -144,7 +144,7 @@ export const ProfileAvatar = ({ user, setUser }: UserProps) => {
       >
         <DialogTitle>Logout Confirmation</DialogTitle>
         <DialogContent>
-          Are you sure you want to logout? <b>Your tasks will not be saved.</b>
+          Apakah yakin kmau akan log out? <b>tugasmu tidak akan tersimpan</b>
         </DialogContent>
         <DialogActions>
           <DialogBtn onClick={handleLogoutConfirmationClose}>Cancel</DialogBtn>

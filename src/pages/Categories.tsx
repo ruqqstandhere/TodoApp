@@ -117,7 +117,7 @@ export const Categories = ({ user, setUser }: UserProps) => {
           <p>You don't have any categories</p>
         )}
         <AddContainer>
-          <h2>Add New Category</h2>
+          <h2>Tambah Kategori Baru</h2>
           <CustomEmojiPicker user={user} emoji={emoji} setEmoji={setEmoji} color={color} />
           <StyledInput
             focused
@@ -134,7 +134,7 @@ export const Categories = ({ user, setUser }: UserProps) => {
             onClick={handleAddCategory}
             disabled={name.length > CATEGORY_NAME_MAX_LENGTH || name === ""}
           >
-            Add Category
+            Tambah Kategori
           </AddCategoryButton>
         </AddContainer>
       </Container>

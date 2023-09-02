@@ -83,13 +83,13 @@ export const AddTask = ({ user, setUser }: UserProps) => {
 
   return (
     <>
-      <TopBar title="Add New Task" />
+      <TopBar title="Tambah Tugas Baru" />
       <Container>
         <CustomEmojiPicker user={user} setEmoji={setEmoji} color={color} />
         <StyledInput
-          label="Task Name"
+          label="Nama Tugas/Jadwal"
           name="name"
-          placeholder="Enter task name"
+          placeholder="Masukkan Nama Tugas/Jadwal"
           value={name}
           onChange={handleNameChange}
           focused
@@ -97,9 +97,9 @@ export const AddTask = ({ user, setUser }: UserProps) => {
           helperText={nameError}
         />
         <StyledInput
-          label="Task Description (optional)"
+          label="Keterangan Tugas"
           name="name"
-          placeholder="Enter task description"
+          placeholder="Tulis catatan tentang tugas anda"
           value={description}
           onChange={handleDescriptionChange}
           multiline
@@ -109,9 +109,9 @@ export const AddTask = ({ user, setUser }: UserProps) => {
           helperText={descriptionError}
         />
         <StyledInput
-          label="Task Deadline (optional)"
-          name="name"
-          placeholder="Enter deadline date"
+          label="Jadwal"
+          name="nama"
+          placeholder="Masukkan Tanggal Deadline"
           type="datetime-local"
           value={deadline}
           onChange={handleDeadlineChange}
@@ -120,7 +120,7 @@ export const AddTask = ({ user, setUser }: UserProps) => {
         {user.settings[0].enableCategories !== undefined && user.settings[0].enableCategories && (
           <>
             <br />
-            <Typography>Category (optional)</Typography>
+            <Typography>Jenis Tugas</Typography>
 
             <CategorySelect
               user={user}
@@ -137,12 +137,12 @@ export const AddTask = ({ user, setUser }: UserProps) => {
                 }}
                 // onClick={() => n("/categories")}
               >
-                <Edit /> &nbsp; Modify Categories
+                <Edit /> &nbsp; Kustom Categories
               </Button>
             </Link>
           </>
         )}
-        <Typography>Color</Typography>
+        <Typography>Warna</Typography>
         <ColorPicker type="color" value={color} onChange={handleColorChange} />
         <AddTaskButton
           onClick={handleAddTask}
@@ -152,7 +152,7 @@ export const AddTask = ({ user, setUser }: UserProps) => {
             name === ""
           }
         >
-          Add Task
+          Tambahkan Tugas
         </AddTaskButton>
       </Container>
     </>

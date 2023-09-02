@@ -15,10 +15,10 @@ export const NotFound = () => {
 
   return (
     <Container>
-      <ErrorCode>404</ErrorCode>
-      <Description>Page Not Found</Description>
+      <ErrorCode>ASUU</ErrorCode>
+      <Description>Loh Kok Ilang Bangsat</Description>
       <BackButton variant="outlined" onClick={() => n("/")}>
-        <ArrowBackIosNew /> &nbsp; Go back to tasks
+        <ArrowBackIosNew /> &nbsp; Kembali Ke Awal
       </BackButton>
     </Container>
   );

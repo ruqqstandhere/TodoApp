@@ -72,11 +72,7 @@ export const CustomEmojiPicker = ({ emoji, setEmoji, user, color, width }: Emoji
       <EmojiContainer>
         <Tooltip
           title={
-            showEmojiPicker
-              ? "Close Emoji Picker"
-              : currentEmoji
-              ? "Change Emoji"
-              : "Choose an Emoji"
+            showEmojiPicker ? "Meru Emoji Picker" : currentEmoji ? "Ganti Emoji" : "Pilih Emoji"
           }
         >
           <Badge

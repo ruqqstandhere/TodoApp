@@ -11,19 +11,17 @@ export const calculateDateDifference = (date: Date): string => {
   const differenceDays = Math.floor(difference / (1000 * 60 * 60 * 24)) + 1;
 
   if (date < currentDate) {
-    return "Task not completed on time";
+    return "Agenda Belum Di Selesaikan";
   } else if (targetDay === currentDay) {
-    return "Today";
+    return "Hari Ini";
   } else if (targetDay === currentDay + 1) {
-    return "Tomorrow";
+    return "Besok";
   } else if (differenceDays <= 7) {
     // "en-US"
     const dayOfWeek = date.toLocaleString(navigator.language, {
       weekday: "long",
     });
-    return `On ${dayOfWeek} (${differenceDays} day${
-      differenceDays !== 1 ? "s" : ""
-    })`;
+    return `On ${dayOfWeek} (${differenceDays} day${differenceDays !== 1 ? "s" : ""})`;
   } else {
     return `In ${differenceDays} days`;
   }
