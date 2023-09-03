@@ -29,7 +29,7 @@ export const Home = ({ user, setUser }: UserProps) => {
 
   useEffect(() => {
     setRandomGreeting(getRandomGreeting());
-    document.title = "Undefeated";
+    document.title = "Jadwal Harian";
     const interval = setInterval(() => {
       setRandomGreeting(getRandomGreeting());
       setGreetingKey((prevKey) => prevKey + 1); // Update the key on each interval

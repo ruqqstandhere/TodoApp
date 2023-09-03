@@ -25,14 +25,14 @@ export const AddTask = ({ user, setUser }: UserProps) => {
   const n = useNavigate();
 
   useEffect(() => {
-    document.title = "Todo App - Add Task";
+    document.title = "Jadwal Harian - Add Task";
   }, []);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newName = event.target.value;
     setName(newName);
     if (newName.length > TASK_NAME_MAX_LENGTH) {
-      setNameError(`Name should be less than or equal to ${TASK_NAME_MAX_LENGTH} characters`);
+      setNameError(`Nama Tidak Boleh Kurang Dari ${TASK_NAME_MAX_LENGTH} characters`);
     } else {
       setNameError("");
     }
@@ -43,7 +43,7 @@ export const AddTask = ({ user, setUser }: UserProps) => {
     setDescription(newDescription);
     if (newDescription.length > DESCRIPTION_MAX_LENGTH) {
       setDescriptionError(
-        `Description should be less than or equal to ${DESCRIPTION_MAX_LENGTH} characters`
+        `Diskripksi Tidak Boleh Kurang Dari ${DESCRIPTION_MAX_LENGTH} characters`
       );
     } else {
       setDescriptionError("");

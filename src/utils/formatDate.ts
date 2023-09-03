@@ -6,7 +6,7 @@ export const formatDate = (date: Date): string => {
   const oneWeek = 7 * oneDay; // One week in milliseconds
 
   if (isSameDay(date, today)) {
-    return `Today at ${formatTime(date)}`;
+    return `Hari Ini Pada ${formatTime(date)}`;
   } else if (isSameDay(date, yesterday)) {
     return `Yesterday at ${formatTime(date)}`;
   } else if (date.getTime() > today.getTime() - oneWeek) {

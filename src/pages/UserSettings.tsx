@@ -29,7 +29,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
   const [openSettings, setOpenSettings] = useState<boolean>(false);
 
   useEffect(() => {
-    document.title = `Todo App - User ${user.name ? `(${user.name})` : ""}`;
+    document.title = `Jadwal Harian - User ${user.name ? `(${user.name})` : ""}`;
   }, [user.name]);
 
   const handleSaveName = () => {
@@ -66,7 +66,7 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
         >
           <Settings fontSize="large" />
         </IconButton>
-        <Tooltip title={user.profilePicture ? "Change profile picture" : "Add profile picture"}>
+        <Tooltip title={user.profilePicture ? "Ganti Foto Profil" : "Masukkan Foto Profil"}>
           <Badge
             overlap="circular"
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -110,14 +110,14 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
         </Tooltip>
 
         <StyledInput
-          label={user.name === null ? "Add Name" : "Change Name"}
+          label={user.name === null ? "Masukkan Nama Anda" : "Ganti Nama"}
           value={name}
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSaveName()}
           error={name.length > USER_NAME_MAX_LENGTH}
           helperText={
             name.length > USER_NAME_MAX_LENGTH
-              ? `Name is too long maximum ${USER_NAME_MAX_LENGTH} characters`
+              ? `Jenengmu Kedawan Cok! (maximum ${USER_NAME_MAX_LENGTH} karakter)`
               : ""
           }
         />
@@ -137,6 +137,15 @@ export const UserSettings = ({ user, setUser }: UserProps) => {
         >
           <Logout />
           &nbsp; Logout
+        </Button>
+        <span>Design & Created By :</span>
+        <Button
+          color="primary"
+          variant="outlined"
+          sx={{ padding: "8px 20px", borderRadius: "14px", marginTop: "8px" }}
+          onClick={() => (window.location.href = "https://www.instagram.com/ruqqnofearss_/")}
+        >
+          SADDSETTBOYZ
         </Button>
       </Container>
       <Dialog

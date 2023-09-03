@@ -122,7 +122,7 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
           alignItems: "center",
         }}
       >
-        Select Tasks To Export&nbsp;
+        Pilih Tugas Untuk Di Export!&nbsp;
         <Tooltip title="Duplicates will be removed during import">
           <IconButton style={{ color: "#ffffff" }}>
             <Info />
@@ -150,7 +150,9 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
             </TaskContainer>
           ))
         ) : (
-          <h3 style={{ opacity: 0.8, fontStyle: "italic" }}>You don't have any tasks to export</h3>
+          <h3 style={{ opacity: 0.8, fontStyle: "italic" }}>
+            Kamu Tidak Punya Tugas Untuk Di Export
+          </h3>
         )}
       </Container>
 
@@ -169,7 +171,7 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
           disabled={selectedTasks.length === 0}
           variant="outlined"
         >
-          <FileDownload /> &nbsp; Export Tugas Terpilih Ke JSON{" "}
+          <FileDownload /> &nbsp; Export Terpilih!{" "}
           {selectedTasks.length > 0 && `[${selectedTasks.length}]`}
         </StyledButton>
 
@@ -178,10 +180,10 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
           disabled={user.tasks.length === 0}
           variant="outlined"
         >
-          <FileDownload /> &nbsp; Export Semua Tugas Ke Json
+          <FileDownload /> &nbsp; Export Semua !
         </StyledButton>
 
-        <h2 style={{ textAlign: "center" }}>Import Tugas Dari JSON</h2>
+        <h2 style={{ textAlign: "center" }}>Import dari Penyimpanan </h2>
         <input
           accept=".json"
           id="import-file"
@@ -199,7 +201,7 @@ export const ImportExport = ({ user, setUser }: UserProps) => {
               width: "300px",
             }}
           >
-            <FileUpload /> &nbsp; Import JSON
+            <FileUpload /> &nbsp; Import!
           </Button>
         </label>
       </Box>

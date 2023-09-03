@@ -10,7 +10,7 @@ export const NotFound = () => {
   const n = useNavigate();
 
   useEffect(() => {
-    document.title = "Todo App - Page Not Found";
+    document.title = "Jadwal Harian - Page Not Found";
   }, []);
 
   return (

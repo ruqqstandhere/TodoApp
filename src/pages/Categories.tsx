@@ -19,7 +19,7 @@ export const Categories = ({ user, setUser }: UserProps) => {
   const n = useNavigate();
 
   useEffect(() => {
-    document.title = "Todo App - Categories";
+    document.title = "Jadwal Harian - Categories";
     if (!user.settings[0].enableCategories) {
       n("/");
     }
@@ -53,7 +53,7 @@ export const Categories = ({ user, setUser }: UserProps) => {
     const newName = event.target.value;
     setName(newName);
     if (newName.length > CATEGORY_NAME_MAX_LENGTH) {
-      setNameError(`Name is too long maximum ${CATEGORY_NAME_MAX_LENGTH} characters`);
+      setNameError(`Jeneng E Kedawan Cok! (maximum ${CATEGORY_NAME_MAX_LENGTH} karakter`);
     } else {
       setNameError("");
     }
@@ -114,15 +114,15 @@ export const Categories = ({ user, setUser }: UserProps) => {
             })}
           </CategoriesContainer>
         ) : (
-          <p>You don't have any categories</p>
+          <p>Kamu Gapunya Kategori Baru</p>
         )}
         <AddContainer>
           <h2>Tambah Kategori Baru</h2>
           <CustomEmojiPicker user={user} emoji={emoji} setEmoji={setEmoji} color={color} />
           <StyledInput
             focused
-            label="Category name"
-            placeholder="Enter category name"
+            label="Nama Kategori"
+            placeholder="Masukkan Nama Kategori"
             value={name}
             onChange={handleNameChange}
             error={nameError !== ""}
