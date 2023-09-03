@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- prettier-ignore -->
 # 📝React.js Todo App
 
@@ -42,3 +43,7 @@ To install and run the project locally, follow these steps:
 - Start the development server: `npm run dev`
 
 The app will now be running at [http://localhost:5173/](http://localhost:5173/).
+=======
+# TodoApp
+📝 React.js todo app with many features, including local storage, different emoji styles, import/export of tasks, and offline usage as a PWA.
+>>>>>>> 2ce866b2ea90d9a9e299238d26a645a00c0dcfff
